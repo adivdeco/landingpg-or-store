@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Ultra-Premium Architect Light Mode */
+    --background: 0 0% 98%;
+    /* Barely off-white */
+    --foreground: 0 0% 3%;
+    /* Near black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3%;
+
+    /* Muted Gold / Bronze */
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Charcoal Accent */
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 0 0% 92%;
+    --accent-foreground: 0 0% 3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 0 0% 3%;
+
+    --radius: 0rem;
+    /* Sharp edges for architectural feel */
+  }
+
+  .dark {
+    /* Obsidian Black */
+    --background: 0 0% 1%;
+    --foreground: 0 0% 98%;
+
+    /* Slightly lighter obsidian */
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Muted Gold / Architecture Bronze */
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Sharp White Accent */
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 3%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden transition-colors duration-700;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Syncopate', sans-serif;
+  }
+}
+
+/* Custom premium utilities */
+@layer utilities {
+  .clip-text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px theme('colors.foreground');
+    opacity: 0.2;
+    color: transparent;
+  }
+
+  .dark .text-outline {
+    opacity: 0.3;
+  }
+
+  .font-display {
+    font-family: 'Syncopate', sans-serif;
+  }
+}

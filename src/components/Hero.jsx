@@ -61,8 +61,8 @@ const Hero = () => {
             {/* Sticky Container for Video & Content */}
             <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
 
-                {/* Video Background */}
-                <div className="absolute inset-0 mt-20 z-0 w-full h-full bg-black">
+                {/* Video Background (Desktop Only) */}
+                <div className="hidden md:block absolute inset-0 mt-20 z-0 w-full h-full bg-black">
                     <motion.video
                         ref={videoRef}
                         src="/videos/herosection.mp4"
